@@ -1,0 +1,11 @@
+<div class="mat-tab-nav-bar-pagination">
+  <div (click)="scrollLeft()" aria-hidden="true" class="mat-nav-bar-pagination mat-nav-bar-pagination-start  mat-ripple" mat-ripple="" [class.mat-nav-bar-pagination-active]="!disableScrollStart" [class.mat-elevation-z4]="!disableScrollStart">
+      <div class="mat-nav-bar-pagination-arrow"></div>
+  </div>
+  <div class="mat-nav-bar-container" #scrollMe>
+      <ng-content></ng-content>
+  </div>
+  <div (click)="scrollRight()" aria-hidden="true" class="mat-nav-bar-pagination mat-nav-bar-pagination-end mat-ripple" mat-ripple="" [class.mat-nav-bar-pagination-active]="!disableScrollEnd" [class.mat-elevation-z4]="!disableScrollEnd">
+      <div class="mat-nav-bar-pagination-arrow"></div>
+  </div>
+</div>

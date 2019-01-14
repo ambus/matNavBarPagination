@@ -1,0 +1,16 @@
+<mat-nav-bar-pagination style="display: flex; flex-direction: column;">
+  <nav mat-tab-nav-bar #matTabNavBar>
+    <a
+      mat-tab-link
+      *ngFor="let link of navLinks"
+      [routerLink]="link.link"
+      dynamicHeight
+      routerLinkActive
+      #rla="routerLinkActive"
+      [active]="rla.isActive"
+    >
+      <span style="opacity: 0.6">{{ link.name }}</span>
+    </a>
+  </nav>
+</mat-nav-bar-pagination>
+<router-outlet></router-outlet>

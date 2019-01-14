@@ -1,0 +1,1 @@
+export * from './src/app/mat-nav-bar-pagination/mat-nav-bar-pagination.module'
