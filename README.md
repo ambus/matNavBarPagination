@@ -1,27 +1,146 @@
+[![NPM](https://nodei.co/npm/mat-nav-bar-pagination.png?downloads=true&downloadRank=true)](https://nodei.co/npm/mat-nav-bar-pagination/)
+
 # MatNavBarPagination
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 6.0.8.
+Module for mat-tab-nav-bar that adds the ability to scroll through the list of bookmarks.
+You can use the router-outlet and have all tabs in a scrollable panel.
 
-## Development server
+![](animation.gif)
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+## Installation
 
-## Code scaffolding
+To install this library, run:
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+```bash
+$ npm install mat-nav-bar-pagination
+```
 
-## Build
+or yarn:
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+```bash
+$ yarn add mat-nav-bar-pagination
+```
 
-## Running unit tests
+## How to use
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+Add import module to your application:
+e.g. in `app.module.ts`
 
-## Running end-to-end tests
+```ts
+import { BrowserModule } from "@angular/platform-browser";
+import { NgModule } from "@angular/core";
+import { AppComponent } from "./app.component";
+import { MatTabsModule } from "@angular/material";
+import { MatNavBarPaginationModule } from "mat-nav-bar-pagination";
 
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
+@NgModule({
+  declarations: [AppComponent],
+  imports: [BrowserModule, MatTabsModule, MatNavBarPaginationModule],
+  providers: [],
+  bootstrap: [AppComponent]
+})
+export class AppModule {}
+```
 
-## Further help
+For the correct work with `matNavBarPagination`, it is necessary to import MatTabsModule from `@angular/material` and import material styles.
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+e.g. in `styles.scss`:
+
+```scss
+@import "../node_modules/@angular/material/theming";
+@import "@angular/material/prebuilt-themes/deeppurple-amber.css";
+```
+
+Now you can use it into your code:
+
+```html
+<mat-nav-bar-pagination>
+  <nav mat-tab-nav-bar #matTabNavBar>
+    <a
+      mat-tab-link
+      routerLink="first"
+      dynamicHeight
+      routerLinkActive
+      #rla1="routerLinkActive"
+      [active]="rla1.isActive"
+      >first</a
+    >
+    <a
+      mat-tab-link
+      routerLink="second"
+      dynamicHeight
+      routerLinkActive
+      #rla2="routerLinkActive"
+      [active]="rla2.isActive"
+      >second</a
+    >
+    <a
+      mat-tab-link
+      routerLink="third"
+      dynamicHeight
+      routerLinkActive
+      #rla3="routerLinkActive"
+      [active]="rla3.isActive"
+      >third</a
+    >
+    <a
+      mat-tab-link
+      routerLink="fourth"
+      dynamicHeight
+      routerLinkActive
+      #rla4="routerLinkActive"
+      [active]="rla4.isActive"
+      >fourth</a
+    >
+    <a
+      mat-tab-link
+      routerLink="fifth"
+      dynamicHeight
+      routerLinkActive
+      #rla5="routerLinkActive"
+      [active]="rla5.isActive"
+      >fifth</a
+    >
+    <a
+      mat-tab-link
+      routerLink="sixth"
+      dynamicHeight
+      routerLinkActive
+      #rla6="routerLinkActive"
+      [active]="rla6.isActive"
+      >sixth</a
+    >
+
+    <!-- Simple way with ngFor -->
+     <!-- <a
+      mat-tab-link
+      *ngFor="let link of navLinks"
+      [routerLink]="link.link"
+      dynamicHeight
+      routerLinkActive
+      #rla="routerLinkActive"
+      [active]="rla.isActive"
+    >
+      <span style="opacity: 0.6">{{ link.name }}</span>
+    </a> -->
+  </nav>
+</mat-nav-bar-pagination>
+<router-outlet></router-outlet>
+```
+
+## Demo
+
+The component demo is available in:
+
+- the github repository `repoadress`
+- compiled version in `./demo` directory.
+
+The demo version can be run by script:
+
+```bash
+$ npm run demo
+```
+
+## License
+
+MIT © [Szymon Standarski](mailto:s.standarski@gmail.com)
