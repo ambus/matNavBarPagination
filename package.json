@@ -27,7 +27,7 @@
   "bugs": {
     "url": "https://github.com/ambus/matNavBarPagination/issues"
   },
-  "private": true,
+  "private": false,
   "peerDependencies": {
     "@angular/animations": "^6.0.3",
     "@angular/common": "^6.0.3",
