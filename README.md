@@ -132,7 +132,7 @@ Now you can use it into your code:
 
 The component demo is available in:
 
-- the github repository `repoadress`
+- [the github repository](https://github.com/ambus/matNavBarPaginationTest)
 - compiled version in `./demo` directory.
 
 The demo version can be run by script:
