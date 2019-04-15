@@ -1,6 +1,6 @@
 [![NPM](https://nodei.co/npm/mat-nav-bar-pagination.png?downloads=true&downloadRank=true)](https://nodei.co/npm/mat-nav-bar-pagination/)
 
-# MatNavBarPagination
+# MatNavBarPagination ![npm](https://img.shields.io/npm/v/mat-nav-bar-pagination.svg?style=for-the-badge) ![npm](https://img.shields.io/npm/dt/mat-nav-bar-pagination.svg?style=for-the-badge) ![NPM](https://img.shields.io/npm/l/mat-nav-bar-pagination.svg?style=for-the-badge) ![GitHub issues](https://img.shields.io/github/issues-raw/ambus/matNavBarPagination.svg?style=for-the-badge) ![npm bundle size](https://img.shields.io/bundlephobia/min/mat-nav-bar-pagination.svg?style=for-the-badge)
 
 Module for mat-tab-nav-bar that adds the ability to scroll through the list of bookmarks.
 You can use the router-outlet and have all tabs in a scrollable panel.
